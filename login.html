@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Test for Geeks.team</title>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="http://ksy-ju.com/TestGeeksteam/style.css">
+	<script>
+	        function FormValidation(){
+	//First Name Validation 
+	    var lg=document.getElementById('login').value;
+	    var ps=document.getElementById('password').value;
+	    if(lg == ""){
+	        document.getElementById('login').style.borderColor = "red";
+	        return false;
+	    }else{
+	        document.getElementById('login').style.borderColor = "green";
+	    }
+	    if(ps == ""){
+	        document.getElementById('password').style.borderColor = "red";
+	        return false;
+	    }else{
+	        document.getElementById('password').style.borderColor = "green";
+	    }    
+	}
+	</script>
+</head>
+<body>
+	<div class="form">
+		<img class="logo" src="logo.png"><br>
+		<form action="success.html" method="post" onsubmit="return FormValidation();" onchange="return FormValidation();">
+			<input class="form-control" id="login" required type="text" name="login" placeholder="login">
+			<input class="form-control" id="password" required type="text" name="password" placeholder="password">
+			<input class="form-control" id="button" type="submit" name="submit" value="login &rarr;" onclick="FormValidation()">
+		</form>
+	</div><!--form-->
+</body>
+</html>
